@@ -53,9 +53,9 @@ const createFooter = () => {
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>123 Cathedral Square<br>Cityville, ST 12345</p>
-                    <p>Email: info@stjudediocese.org</p>
-                    <p>Phone: (555) 012-3456</p>
+                    <p>Bishop's Court, PO Box 32, Oke Osin, Iludun-Oro, Kwara State, Nigeria</p>
+                    <p>Email: fvrfth@gmail.com</p>
+                    <p>Phone: +234 (0)803 553 2956</p>
                 </div>
             </div>
             <div class="footer-bottom">
