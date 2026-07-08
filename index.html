@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diocese of Igbomina West | Welcome</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(26, 42, 68, 0.6), rgba(26, 42, 68, 0.6)), url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&q=80&w=1200') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+        .hero-content h1 { color: var(--white); font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero-content p { font-size: 1.25rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        
+        .welcome-section { text-align: center; }
+        .latest-news-preview { background-color: var(--accent-color); }
+        .cta-section { background-color: var(--primary-color); color: var(--white); text-align: center; }
+        .cta-section h2 { color: var(--secondary-color); }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1 class="serif">Faith, Hope, & Love</h1>
+                <p>Serving the community and spreading the light of the Gospel throughout the Diocese of Igbomina West.</p>
+                <div class="hero-btns">
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                    <a href="contact.html" class="btn btn-outline" style="border-color: white; color: white;">Visit Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="welcome-section section-padding">
+            <div class="container">
+                <h2 class="serif">Welcome to our Diocese</h2>
+                <p style="max-width: 800px; margin: 1rem auto;">We are a vibrant community of faith dedicated to worship, fellowship, and service. Whether you are a lifelong member or just visiting, we welcome you with open arms.</p>
+            </div>
+        </section>
+
+        <!-- Latest News Preview -->
+        <section class="latest-news-preview section-padding">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--spacing-md);">
+                    <h2 class="serif">Latest News</h2>
+                    <a href="news.html" style="color: var(--primary-color); font-weight: 600;">View All &rarr;</a>
+                </div>
+                <div id="latest-news-container" class="grid">
+                    <!-- Dynamic Content Injected Here by data.js -->
+                    <p>Loading recent news...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section section-padding">
+            <div class="container">
+                <h2 class="serif">Join Us for Worship</h2>
+                <p style="margin-bottom: var(--spacing-md);">Find a parish near you and experience the beauty of our liturgy.</p>
+                <a href="events.html" class="btn btn-primary" style="background-color: var(--secondary-color); color: var(--primary-color);">Upcoming Events</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/partials.js"></script>
+    <script type="module">
+        import { db } from './assets/js/firebase-config.js';
+        // Future: data.js logic for home page highlights
+    </script>
+</body>
+</html>

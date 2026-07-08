@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Diocese of Igbomina West</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        .contact-info-card { background: var(--primary-color); color: white; padding: 2rem; border-radius: var(--border-radius); }
+        .contact-info-card h2 { color: var(--secondary-color); }
+        .map-container { margin-top: var(--spacing-lg); height: 400px; border-radius: var(--border-radius); overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        
+        form div { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.3rem; font-weight: 600; }
+        input, textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+        
+        @media (max-width: 768px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="serif" style="text-align: center;">Get In Touch</h1>
+                <div class="contact-wrapper">
+                    <!-- Contact Form (Formspree) -->
+                    <div>
+                        <h2 class="serif">Send a Message</h2>
+                        <form action="https://formspree.io/f/xzdlqyrw" method="POST">
+                            <div>
+                                <label>Your Name</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div>
+                                <label>Phone (optional)</label>
+                                <input type="tel" name="phone" pattern="[0-9]{11}" placeholder="e.g., 08012345678">
+                            </div>
+                            <div>
+                                <label>Email Address</label>
+                                <input type="email" name="_replyto" required>
+                            </div>
+                            <div>
+                                <label>Subject</label>
+                                <input type="text" name="subject">
+                            </div>
+                            <div>
+                                <label>Message</label>
+                                <textarea name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="contact-info-card">
+                        <h2 class="serif">Contact Information</h2>
+                        <p style="margin-bottom: 1.5rem;">We would love to hear from you. Please reach out via the form or use the details below.</p>
+                        
+                        <p><strong>Address:</strong><br>Bishop's Court, PO Box 32, Oke Osin, Iludun-Oro, Kwara State, Nigeria</p>
+                        <p style="margin-top: 1rem;"><strong>Phone:</strong><br>+234 (0)803 553 2956</p>
+                        <p style="margin-top: 1rem;"><strong>Email:</strong><br>info@stjudediocese.org</p>
+                        
+                        <h3 class="serif" style="margin-top: 2rem; color: var(--secondary-color);">Service Times</h3>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Sunday Eucharist: 8:00 AM & 10:30 AM</li>
+                            <li>Wednesday Midday Prayer: 12:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <!-- Google Maps Placeholder -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.7776083995327!2d4.867462000000001!3d8.2251058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1037c4e5fdd52f1d%3A0x496a0b0cd7de8afa!2sSt.%20James%20Anglican%20Bishop&#39;s%20Court!5e0!3m2!1sen!2sng!4v1783513075279!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/partials.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Announcements | Diocese of Igbomina West</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="serif" style="text-align: center; margin-bottom: var(--spacing-lg);">News & Announcements</h1>
+                <div id="news-grid" class="grid"></div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/partials.js"></script>
+    <script type="module">
+        import { loadAllNews } from './assets/js/data.js';
+        loadAllNews();
+    </script>
+</body>
+</html>

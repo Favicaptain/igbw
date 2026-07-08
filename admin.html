@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Diocese of Igbomina West</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .admin-container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        .login-card { max-width: 400px; margin: 4rem auto; padding: 2rem; }
+        .dashboard { display: none; }
+        .admin-nav { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .tab-btn { background: var(--accent-color); border: none; padding: 0.8rem 1.2rem; cursor: pointer; border-radius: 4px; font-weight: 600; }
+        .tab-btn.active { background: var(--primary-color); color: white; }
+        
+        form div { margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.3rem; font-weight: 600; }
+        input, textarea, select { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit; }
+        
+        .admin-item { 
+            background: white; border: 1px solid #eee; padding: 1rem; margin-bottom: 0.5rem; 
+            display: flex; justify-content: space-between; align-items: center; border-radius: 4px;
+        }
+        .btn-delete { background: var(--error); color: white; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem; }
+        
+        #image-preview { max-width: 200px; margin-top: 10px; display: none; }
+        .logout-btn { background: #eee; border: none; padding: 0.5rem 1rem; cursor: pointer; float: right; }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Login Form -->
+        <div id="login-section" class="card login-card">
+            <h2 class="serif" style="margin-bottom: 1.5rem;">Admin Login</h2>
+            <form id="login-form">
+                <div>
+                    <label>Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+            <p id="login-error" style="color: var(--error); margin-top: 1rem; display: none;"></p>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard-section" class="dashboard">
+            <button id="logout-btn" class="logout-btn">Logout</button>
+            <h1 class="serif">Dashboard</h1>
+            
+            <nav class="admin-nav">
+                <button class="tab-btn active" data-tab="news">News</button>
+                <button class="tab-btn" data-tab="events">Events</button>
+                <button class="tab-btn" data-tab="sermons">Sermons</button>
+                <button class="tab-btn" data-tab="gallery">Gallery</button>
+            </nav>
+
+            <div id="editor-area" class="card card-body">
+                <h2 id="editor-title" class="serif">Add News</h2>
+                <form id="admin-form">
+                    <input type="hidden" id="item-id">
+                    <div id="form-fields">
+                        <!-- Dynamic Fields Injected Here -->
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn btn-primary">Save Item</button>
+                    <button type="button" id="cancel-btn" class="btn btn-outline" style="margin-left: 10px;">Clear Form</button>
+                </form>
+            </div>
+
+            <hr style="margin: 2rem 0;">
+
+            <div id="list-area">
+                <h2 class="serif">Current Items</h2>
+                <div id="items-list">
+                    <!-- Dynamic List Injected Here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/partials.js"></script>
+    <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>

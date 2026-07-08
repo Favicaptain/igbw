@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Diocese of Igbomina West</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+        }
+        .page-header h1 { color: var(--secondary-color); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+        .leader-profile {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: var(--spacing-md);
+        }
+        .leader-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: var(--spacing-sm);
+            border: 4px solid var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="serif">Our Story</h1>
+                <p>History, Mission, and Leadership of the Diocese</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div>
+                        <h2 class="serif">Our History</h2>
+                        <p>Founded in 1892, the Diocese of Igbomina West has been a cornerstone of the community for over a century. What began as a small gathering of faithful believers has grown into a diverse and active diocese covering twelve counties.</p>
+                        <p style="margin-top: 1rem;">We continue to build on the legacy of our founders, adapting to the needs of the modern world while remaining rooted in the timeless truths of the Gospel.</p>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1548625361-024829ad205b?auto=format&fit=crop&q=80&w=800" alt="Historical Church Building" style="border-radius: var(--border-radius);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background-color: var(--accent-color);">
+            <div class="container">
+                <h2 class="serif" style="text-align: center; margin-bottom: var(--spacing-md);">Our Leadership</h2>
+                <div class="leader-profile" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="Bishop Portrait" class="leader-img" style="margin: 0 auto 1rem auto;">
+                    <h3 class="serif">The Right Rev. John Smith</h3>
+                    <p><strong>Bishop of St. Jude</strong></p>
+                    <p style="max-width: 700px; margin: 1rem auto;">Bishop John was consecrated in 2015 and has since led the diocese with a focus on youth outreach and social justice. He holds a Doctorate in Divinity from Oxford and is passionate about environmental stewardship.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container" style="text-align: center;">
+                <h2 class="serif">Mission & Vision</h2>
+                <div class="grid" style="margin-top: var(--spacing-md);">
+                    <div class="card card-body">
+                        <h3 class="serif">Our Mission</h3>
+                        <p>To proclaim the Good News of the Kingdom, teach, baptize, and nurture new believers.</p>
+                    </div>
+                    <div class="card card-body">
+                        <h3 class="serif">Our Vision</h3>
+                        <p>To be a beacon of light and hope, transforming lives through the love of Christ.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/partials.js"></script>
+</body>
+</html>
